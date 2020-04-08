@@ -28,7 +28,7 @@
     "url": "https://github.com/FormidableLabs/enzyme-matchers/issues"
   },
   "peerDependencies": {
-    "enzyme": ">=3.4.0"
+    "enzyme": "^3.4.0"
   },
   "dependencies": {
     "circular-json-es6": "^2.0.1",

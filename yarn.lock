@@ -5516,7 +5516,7 @@ jest-worker@^25.2.0:
     merge-stream "^2.0.0"
     supports-color "^7.0.0"
 
-jest@^25.2.0:
+"jest@^22.0.0 || ^23.0.0 || ^24.0.0 || ^25.0.0", jest@^25.2.0:
   version "25.2.0"
   resolved "https://registry.yarnpkg.com/jest/-/jest-25.2.0.tgz#d7b9b9ce7007002a9b4586da9bf0e0414a10a27d"
   integrity sha512-6vlNxNhkZZcFBpn6GkVHyEQZKE9zAsnYithlHAnkVLJYFdD6o4dV2S7uTFcxi6k9XEEN2ilVLuTe6PJ1qgbi4w==
@@ -7408,7 +7408,7 @@ react-test-renderer@^16.0.0-0:
     object-assign "^4.1.1"
     prop-types "^15.6.0"
 
-react@^16.5.1:
+"react@^0.13.0 || ^0.14.0 || ^15.0.0 || ^16.0.0", react@^16.5.1:
   version "16.5.2"
   resolved "https://registry.yarnpkg.com/react/-/react-16.5.2.tgz#19f6b444ed139baa45609eee6dc3d318b3895d42"
   dependencies:

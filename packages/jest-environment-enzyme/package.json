@@ -41,12 +41,15 @@
     "url": "https://github.com/FormidableLabs/enzyme-matchers/issues"
   },
   "peerDependencies": {
-    "enzyme": "3.x",
-    "jest": ">=22.0.0",
-    "react": "^0.13.0 || ^0.14.0 || ^15.0.0 || >=16.x"
+    "enzyme": "^3.4.0",
+    "jest": "^22.0.0 || ^23.0.0 || ^24.0.0 || ^25.0.0",
+    "react": "^0.13.0 || ^0.14.0 || ^15.0.0 || ^16.0.0"
   },
   "devDependencies": {
-    "cpy-cli": "^2.0.0"
+    "cpy-cli": "^2.0.0",
+    "enzyme": "^3.4.0",
+    "jest": "^22.0.0 || ^23.0.0 || ^24.0.0 || ^25.0.0",
+    "react": "^0.13.0 || ^0.14.0 || ^15.0.0 || ^16.0.0"
   },
   "dependencies": {
     "jest-environment-jsdom": "^25.2.0"
