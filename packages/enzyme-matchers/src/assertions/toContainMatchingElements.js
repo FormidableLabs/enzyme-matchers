@@ -34,7 +34,7 @@ function toContainMatchingElements(
       ? ''
       : 's'} matching "${getDisplayName(selector)}" but it did.`,
     contextualInformation: {
-      actual: `HTML Output of <${nodeName}>:\n ${html(enzymeWrapper)}`,
+      actual: `Element tree for <${nodeName}>:\n ${html(enzymeWrapper)}`,
     },
   };
 }

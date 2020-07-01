@@ -2,7 +2,7 @@
 
 exports[`toMatchSelector mount provides contextual information for the message (mount) 1`] = `
 Object {
-  "actual": "<span id=\\"child\\" class=\\"foo\\"></span>",
+  "actual": "<span id=\\"child\\" className=\\"foo\\" />",
 }
 `;
 

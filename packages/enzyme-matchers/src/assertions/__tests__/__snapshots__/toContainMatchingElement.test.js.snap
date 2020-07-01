@@ -2,29 +2,63 @@
 
 exports[`toContainMatchingElement provides contextual information for the message 1`] = `
 Object {
-  "actual": "HTML Output of <div>:
- <div><ul><li><User index={1} className=\\"userOne\\" /></li><li><User index={2} className=\\"userTwo\\" /></li></ul></div>",
+  "actual": "Element tree for <div>:
+ <div>
+  <ul>
+    <li>
+      <User index={1} className=\\"userOne\\" />
+    </li>
+    <li>
+      <User index={2} className=\\"userTwo\\" />
+    </li>
+  </ul>
+</div>",
 }
 `;
 
 exports[`toContainMatchingElement provides contextual information for the message 2`] = `
 Object {
-  "actual": "HTML Output of <div>:
- <div><ul><li><User index={1} className=\\"userOne\\" /></li><li><User index={2} className=\\"userTwo\\" /></li></ul></div>",
+  "actual": "Element tree for <div>:
+ <div>
+  <ul>
+    <li>
+      <User index={1} className=\\"userOne\\" />
+    </li>
+    <li>
+      <User index={2} className=\\"userTwo\\" />
+    </li>
+  </ul>
+</div>",
 }
 `;
 
 exports[`toContainMatchingElement provides contextual information for the message 3`] = `
 Object {
-  "actual": "HTML Output of <div>:
- <div><ul><li><User index={1} className=\\"userOne\\" /></li><li><User index={2} className=\\"userTwo\\" /></li></ul></div>",
+  "actual": "Element tree for <div>:
+ <div>
+  <ul>
+    <li>
+      <User index={1} className=\\"userOne\\" />
+    </li>
+    <li>
+      <User index={2} className=\\"userTwo\\" />
+    </li>
+  </ul>
+</div>",
 }
 `;
 
 exports[`toContainMatchingElement provides contextual information for the message 4`] = `
 Object {
-  "actual": "HTML Output of <ul>:
- <ul><li><User index={1} className=\\"userOne\\" /></li><li><User index={2} className=\\"userTwo\\" /></li></ul>",
+  "actual": "Element tree for <ul>:
+ <ul>
+  <li>
+    <User index={1} className=\\"userOne\\" />
+  </li>
+  <li>
+    <User index={2} className=\\"userTwo\\" />
+  </li>
+</ul>",
 }
 `;
 

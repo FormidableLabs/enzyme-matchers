@@ -2,7 +2,11 @@
 
 exports[`toBeEmptyRender provides contextual information for the message 1`] = `
 Object {
-  "actual": "Found Nodes HTML output: <div></div>",
+  "actual": "Found Nodes HTML output: <NonEmptyRenderFixture>
+  <div>
+    <EmptyRenderFixture />
+  </div>
+</NonEmptyRenderFixture>",
 }
 `;
 

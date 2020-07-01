@@ -10,7 +10,7 @@ Object {
 exports[`toHaveStyle mount provides the right info for if there is no style prop 1`] = `
 Object {
   "contextualInformation": Object {
-    "actual": "<div></div>",
+    "actual": "<div />",
   },
   "message": "Expected <div> component to have a style prop but it did not.",
   "negatedMessage": "Expected <div> component not to have a style prop but it did.",
@@ -21,7 +21,7 @@ Object {
 exports[`toHaveStyle mount provides the right info when a specific key doesn't exist 1`] = `
 Object {
   "contextualInformation": Object {
-    "actual": "<div style=\\"width: 0px;\\"></div>",
+    "actual": "<div style={{...}} />",
   },
   "message": "Expected <div> component to have a style keys of \\"height\\" but it did not.",
   "negatedMessage": "Expected <div> component not to have a style key of \\"height\\" but it did.",

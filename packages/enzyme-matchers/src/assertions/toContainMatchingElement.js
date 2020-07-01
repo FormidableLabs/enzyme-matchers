@@ -28,7 +28,7 @@ function toContainMatchingElement(
       `Expected <${nodeName}> to not contain an element matching ` +
       `"${getDisplayName(selector)}" but it did.`,
     contextualInformation: {
-      actual: `HTML Output of <${nodeName}>:\n ${html(enzymeWrapper)}`,
+      actual: `Element tree for <${nodeName}>:\n ${html(enzymeWrapper)}`,
     },
   };
 }

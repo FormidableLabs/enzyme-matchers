@@ -2,7 +2,7 @@
 
 exports[`toHaveValue mount provides contextual information for the message (mount) 1`] = `
 Object {
-  "actual": "<input value=\\"test\\">",
+  "actual": "<input defaultValue=\\"test\\" />",
 }
 `;
 
