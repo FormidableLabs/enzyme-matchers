@@ -11,26 +11,26 @@ import html from '../utils/html';
 import getDisplayName from '../utils/displayName';
 import getNodeName from '../utils/name';
 
-function toContainMatchingElement(
+function toContainMatchingNode(
   enzymeWrapper: EnzymeObject,
   selector: string
 ): Matcher {
-  const matches = enzymeWrapper.find(selector);
+  const matches = enzymeWrapper.find(selector).hostNodes();
   const pass = matches.length > 0;
   const nodeName = getNodeName(enzymeWrapper);
 
   return {
     pass,
     message:
-      `Expected <${nodeName}> to contain at least one element matching ` +
+      `Expected <${nodeName}> to contain at least one node matching ` +
       `"${getDisplayName(selector)}" but none were found.`,
     negatedMessage:
-      `Expected <${nodeName}> to not contain an element matching ` +
+      `Expected <${nodeName}> to not contain a node matching ` +
       `"${getDisplayName(selector)}" but it did.`,
     contextualInformation: {
-      actual: `Element tree for <${nodeName}>:\n ${html(enzymeWrapper)}`,
+      actual: `HTML Output of <${nodeName}>:\n ${html(enzymeWrapper, true)}`,
     },
   };
 }
 
-export default toContainMatchingElement;
+export default toContainMatchingNode;

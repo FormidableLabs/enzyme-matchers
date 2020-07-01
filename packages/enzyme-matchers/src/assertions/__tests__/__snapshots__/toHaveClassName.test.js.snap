@@ -2,7 +2,7 @@
 
 exports[`toHaveClassName mount provides contextual information for the message (mount) 1`] = `
 Object {
-  "actual": "Found node output: <span class=\\"bar baz\\"></span>",
+  "actual": "Found node output: <span className=\\"bar baz\\" />",
 }
 `;
 

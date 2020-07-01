@@ -1,36 +1,399 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`toContainExactlyOneMatchingElement provides contextual information for the message 1`] = `
+exports[`toContainExactlyOneMatchingElement with a mount wrapper provides contextual information for the message 1`] = `
 Object {
-  "actual": "HTML Output of <div>:
- <div><ul><li><User index={1} className=\\"userOne\\" /></li><li><User index={2} className=\\"userTwo\\" /></li></ul></div>",
+  "actual": "Element tree for <Fixture>:
+ <Fixture>
+  <div>
+    <ul>
+      <li>
+        <User index={1} className=\\"userOne\\">
+          <span>
+            User 
+            <span data-index=\\"value-1\\">
+              1
+            </span>
+          </span>
+        </User>
+      </li>
+      <li>
+        <User index={2} className=\\"userTwo\\">
+          <span>
+            User 
+            <span data-index=\\"value-2\\">
+              2
+            </span>
+          </span>
+        </User>
+      </li>
+    </ul>
+  </div>
+</Fixture>",
 }
 `;
 
-exports[`toContainExactlyOneMatchingElement provides contextual information for the message 2`] = `
+exports[`toContainExactlyOneMatchingElement with a mount wrapper provides contextual information for the message 2`] = `
 Object {
-  "actual": "HTML Output of <div>:
- <div><ul><li><User index={1} className=\\"userOne\\" /></li><li><User index={2} className=\\"userTwo\\" /></li></ul></div>",
+  "actual": "Element tree for <Fixture>:
+ <Fixture>
+  <div>
+    <ul>
+      <li>
+        <User index={1} className=\\"userOne\\">
+          <span>
+            User 
+            <span data-index=\\"value-1\\">
+              1
+            </span>
+          </span>
+        </User>
+      </li>
+      <li>
+        <User index={2} className=\\"userTwo\\">
+          <span>
+            User 
+            <span data-index=\\"value-2\\">
+              2
+            </span>
+          </span>
+        </User>
+      </li>
+    </ul>
+  </div>
+</Fixture>",
 }
 `;
 
-exports[`toContainExactlyOneMatchingElement provides contextual information for the message 3`] = `
+exports[`toContainExactlyOneMatchingElement with a mount wrapper provides contextual information for the message 3`] = `
 Object {
-  "actual": "HTML Output of <ul>:
- <ul><li><User index={1} className=\\"userOne\\" /></li><li><User index={2} className=\\"userTwo\\" /></li></ul>",
+  "actual": "Element tree for <Fixture>:
+ <Fixture>
+  <div>
+    <ul>
+      <li>
+        <User index={1} className=\\"userOne\\">
+          <span>
+            User 
+            <span data-index=\\"value-1\\">
+              1
+            </span>
+          </span>
+        </User>
+      </li>
+      <li>
+        <User index={2} className=\\"userTwo\\">
+          <span>
+            User 
+            <span data-index=\\"value-2\\">
+              2
+            </span>
+          </span>
+        </User>
+      </li>
+    </ul>
+  </div>
+</Fixture>",
 }
 `;
 
-exports[`toContainExactlyOneMatchingElement returns the message with the proper fail verbage 1`] = `"Expected <div> to not contain 1 element matching \\"User\\" but it did."`;
+exports[`toContainExactlyOneMatchingElement with a mount wrapper provides contextual information for the message 4`] = `
+Object {
+  "actual": "Element tree for <Fixture>:
+ <Fixture>
+  <div>
+    <ul>
+      <li>
+        <User index={1} className=\\"userOne\\">
+          <span>
+            User 
+            <span data-index=\\"value-1\\">
+              1
+            </span>
+          </span>
+        </User>
+      </li>
+      <li>
+        <User index={2} className=\\"userTwo\\">
+          <span>
+            User 
+            <span data-index=\\"value-2\\">
+              2
+            </span>
+          </span>
+        </User>
+      </li>
+    </ul>
+  </div>
+</Fixture>",
+}
+`;
 
-exports[`toContainExactlyOneMatchingElement returns the message with the proper fail verbage 2`] = `"Expected <div> to not contain 1 element matching \\".userThree\\" but it did."`;
+exports[`toContainExactlyOneMatchingElement with a mount wrapper provides contextual information for the message 5`] = `
+Object {
+  "actual": "Element tree for <ul>:
+ <ul>
+  <li>
+    <User index={1} className=\\"userOne\\">
+      <span>
+        User 
+        <span data-index=\\"value-1\\">
+          1
+        </span>
+      </span>
+    </User>
+  </li>
+  <li>
+    <User index={2} className=\\"userTwo\\">
+      <span>
+        User 
+        <span data-index=\\"value-2\\">
+          2
+        </span>
+      </span>
+    </User>
+  </li>
+</ul>",
+}
+`;
 
-exports[`toContainExactlyOneMatchingElement returns the message with the proper fail verbage 3`] = `"Expected <div> to not contain 1 element matching \\"[index]\\" but it did."`;
+exports[`toContainExactlyOneMatchingElement with a mount wrapper provides contextual information for the message 6`] = `
+Object {
+  "actual": "Element tree for <2 (anonymous) nodes found>:
+ Multiple nodes found:
+0: <function User(props) {
+  return React.createElement(\\"span\\", null, \\"User \\", React.createElement(\\"span\\", {
+    \\"data-index\\": \`value-\${props.index}\`
+  }, props.index));
+} index=\\"1\\" className=\\"userOne\\"/>
+1: <function User(props) {
+  return React.createElement(\\"span\\", null, \\"User \\", React.createElement(\\"span\\", {
+    \\"data-index\\": \`value-\${props.index}\`
+  }, props.index));
+} index=\\"2\\" className=\\"userTwo\\"/>
+",
+}
+`;
 
-exports[`toContainExactlyOneMatchingElement returns the message with the proper fail verbage 4`] = `"Expected <ul> to not contain 1 element matching \\"[index]\\" but it did."`;
+exports[`toContainExactlyOneMatchingElement with a mount wrapper provides contextual information for the message 7`] = `
+Object {
+  "actual": "Element tree for <Fixture>:
+ <Fixture>
+  <div>
+    <ul>
+      <li>
+        <User index={1} className=\\"userOne\\">
+          <span>
+            User 
+            <span data-index=\\"value-1\\">
+              1
+            </span>
+          </span>
+        </User>
+      </li>
+      <li>
+        <User index={2} className=\\"userTwo\\">
+          <span>
+            User 
+            <span data-index=\\"value-2\\">
+              2
+            </span>
+          </span>
+        </User>
+      </li>
+    </ul>
+  </div>
+</Fixture>",
+}
+`;
 
-exports[`toContainExactlyOneMatchingElement returns the message with the proper pass verbage 1`] = `"Expected <div> to contain 1 element matching \\".userOne\\" but 1 was found."`;
+exports[`toContainExactlyOneMatchingElement with a mount wrapper provides contextual information for the message 8`] = `
+Object {
+  "actual": "Element tree for <Fixture>:
+ <Fixture>
+  <div>
+    <ul>
+      <li>
+        <User index={1} className=\\"userOne\\">
+          <span>
+            User 
+            <span data-index=\\"value-1\\">
+              1
+            </span>
+          </span>
+        </User>
+      </li>
+      <li>
+        <User index={2} className=\\"userTwo\\">
+          <span>
+            User 
+            <span data-index=\\"value-2\\">
+              2
+            </span>
+          </span>
+        </User>
+      </li>
+    </ul>
+  </div>
+</Fixture>",
+}
+`;
 
-exports[`toContainExactlyOneMatchingElement returns the message with the proper pass verbage 2`] = `"Expected <div> to contain 1 element matching \\"[index=1]\\" but 1 was found."`;
+exports[`toContainExactlyOneMatchingElement with a mount wrapper returns the proper verbage for ".userOne" 1`] = `"Expected <Fixture> to contain 1 element matching \\".userOne\\" but 1 was found."`;
 
-exports[`toContainExactlyOneMatchingElement returns the message with the proper pass verbage 3`] = `"Expected <ul> to contain 1 element matching \\"[index=1]\\" but 1 was found."`;
+exports[`toContainExactlyOneMatchingElement with a mount wrapper returns the proper verbage for ".userThree" 1`] = `"Expected <Fixture> to not contain 1 element matching \\".userThree\\" but it did."`;
+
+exports[`toContainExactlyOneMatchingElement with a mount wrapper returns the proper verbage for "[data-index="value-1"]" 1`] = `"Expected <Fixture> to contain 1 element matching \\"[data-index=\\"value-1\\"]\\" but 1 was found."`;
+
+exports[`toContainExactlyOneMatchingElement with a mount wrapper returns the proper verbage for "[index=1]" 1`] = `"Expected <Fixture> to contain 1 element matching \\"[index=1]\\" but 1 was found."`;
+
+exports[`toContainExactlyOneMatchingElement with a mount wrapper returns the proper verbage for "[index=1]" 2`] = `"Expected <2 (anonymous) nodes found> to contain 1 element matching \\"[index=1]\\" but 1 was found."`;
+
+exports[`toContainExactlyOneMatchingElement with a mount wrapper returns the proper verbage for "[index]" 1`] = `"Expected <Fixture> to not contain 1 element matching \\"[index]\\" but it did."`;
+
+exports[`toContainExactlyOneMatchingElement with a mount wrapper returns the proper verbage for "[index]" 2`] = `"Expected <ul> to not contain 1 element matching \\"[index]\\" but it did."`;
+
+exports[`toContainExactlyOneMatchingElement with a mount wrapper returns the proper verbage for "User" 1`] = `"Expected <Fixture> to not contain 1 element matching \\"User\\" but it did."`;
+
+exports[`toContainExactlyOneMatchingElement with a shallow wrapper provides contextual information for the message 1`] = `
+Object {
+  "actual": "Element tree for <div>:
+ <div>
+  <ul>
+    <li>
+      <User index={1} className=\\"userOne\\" />
+    </li>
+    <li>
+      <User index={2} className=\\"userTwo\\" />
+    </li>
+  </ul>
+</div>",
+}
+`;
+
+exports[`toContainExactlyOneMatchingElement with a shallow wrapper provides contextual information for the message 2`] = `
+Object {
+  "actual": "Element tree for <div>:
+ <div>
+  <ul>
+    <li>
+      <User index={1} className=\\"userOne\\" />
+    </li>
+    <li>
+      <User index={2} className=\\"userTwo\\" />
+    </li>
+  </ul>
+</div>",
+}
+`;
+
+exports[`toContainExactlyOneMatchingElement with a shallow wrapper provides contextual information for the message 3`] = `
+Object {
+  "actual": "Element tree for <div>:
+ <div>
+  <ul>
+    <li>
+      <User index={1} className=\\"userOne\\" />
+    </li>
+    <li>
+      <User index={2} className=\\"userTwo\\" />
+    </li>
+  </ul>
+</div>",
+}
+`;
+
+exports[`toContainExactlyOneMatchingElement with a shallow wrapper provides contextual information for the message 4`] = `
+Object {
+  "actual": "Element tree for <div>:
+ <div>
+  <ul>
+    <li>
+      <User index={1} className=\\"userOne\\" />
+    </li>
+    <li>
+      <User index={2} className=\\"userTwo\\" />
+    </li>
+  </ul>
+</div>",
+}
+`;
+
+exports[`toContainExactlyOneMatchingElement with a shallow wrapper provides contextual information for the message 5`] = `
+Object {
+  "actual": "Element tree for <ul>:
+ <ul>
+  <li>
+    <User index={1} className=\\"userOne\\" />
+  </li>
+  <li>
+    <User index={2} className=\\"userTwo\\" />
+  </li>
+</ul>",
+}
+`;
+
+exports[`toContainExactlyOneMatchingElement with a shallow wrapper provides contextual information for the message 6`] = `
+Object {
+  "actual": "Element tree for <2 (anonymous) nodes found>:
+ Multiple nodes found:
+0: <function User(props) {
+  return React.createElement(\\"span\\", null, \\"User \\", React.createElement(\\"span\\", {
+    \\"data-index\\": \`value-\${props.index}\`
+  }, props.index));
+} index=\\"1\\" className=\\"userOne\\"/>
+1: <function User(props) {
+  return React.createElement(\\"span\\", null, \\"User \\", React.createElement(\\"span\\", {
+    \\"data-index\\": \`value-\${props.index}\`
+  }, props.index));
+} index=\\"2\\" className=\\"userTwo\\"/>
+",
+}
+`;
+
+exports[`toContainExactlyOneMatchingElement with a shallow wrapper provides contextual information for the message 7`] = `
+Object {
+  "actual": "Element tree for <div>:
+ <div>
+  <ul>
+    <li>
+      <User index={1} className=\\"userOne\\" />
+    </li>
+    <li>
+      <User index={2} className=\\"userTwo\\" />
+    </li>
+  </ul>
+</div>",
+}
+`;
+
+exports[`toContainExactlyOneMatchingElement with a shallow wrapper provides contextual information for the message 8`] = `
+Object {
+  "actual": "Element tree for <div>:
+ <div>
+  <ul>
+    <li>
+      <User index={1} className=\\"userOne\\" />
+    </li>
+    <li>
+      <User index={2} className=\\"userTwo\\" />
+    </li>
+  </ul>
+</div>",
+}
+`;
+
+exports[`toContainExactlyOneMatchingElement with a shallow wrapper returns the proper verbage for ".userOne" 1`] = `"Expected <div> to contain 1 element matching \\".userOne\\" but 1 was found."`;
+
+exports[`toContainExactlyOneMatchingElement with a shallow wrapper returns the proper verbage for ".userThree" 1`] = `"Expected <div> to not contain 1 element matching \\".userThree\\" but it did."`;
+
+exports[`toContainExactlyOneMatchingElement with a shallow wrapper returns the proper verbage for "[data-index="value-1"]" 1`] = `"Expected <div> to not contain 1 element matching \\"[data-index=\\"value-1\\"]\\" but it did."`;
+
+exports[`toContainExactlyOneMatchingElement with a shallow wrapper returns the proper verbage for "[index=1]" 1`] = `"Expected <div> to contain 1 element matching \\"[index=1]\\" but 1 was found."`;
+
+exports[`toContainExactlyOneMatchingElement with a shallow wrapper returns the proper verbage for "[index=1]" 2`] = `"Expected <2 (anonymous) nodes found> to contain 1 element matching \\"[index=1]\\" but 1 was found."`;
+
+exports[`toContainExactlyOneMatchingElement with a shallow wrapper returns the proper verbage for "[index]" 1`] = `"Expected <div> to not contain 1 element matching \\"[index]\\" but it did."`;
+
+exports[`toContainExactlyOneMatchingElement with a shallow wrapper returns the proper verbage for "[index]" 2`] = `"Expected <ul> to not contain 1 element matching \\"[index]\\" but it did."`;
+
+exports[`toContainExactlyOneMatchingElement with a shallow wrapper returns the proper verbage for "User" 1`] = `"Expected <div> to not contain 1 element matching \\"User\\" but it did."`;

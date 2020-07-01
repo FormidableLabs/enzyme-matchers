@@ -1,10 +1,10 @@
 const PropTypes = require('prop-types');
 const getNodeName = require('../../utils/name');
-const toContainExactlyOneMatchingElement = require('../toContainExactlyOneMatchingElement');
+const toContainMatchingNode = require('../toContainMatchingNode');
 
 function User(props) {
   return (
-    <span>
+    <span className={props.className}>
       User <span data-index={`value-${props.index}`}>{props.index}</span>
     </span>
   );
@@ -12,6 +12,7 @@ function User(props) {
 
 User.propTypes = {
   index: PropTypes.number.isRequired,
+  className: PropTypes.string,
 };
 
 function Fixture() {
@@ -29,26 +30,24 @@ function Fixture() {
   );
 }
 
-describe('toContainExactlyOneMatchingElement', () => {
+describe('toContainMatchingNode', () => {
   [shallow, mount].forEach(renderer => {
     describe(`with a ${renderer.name} wrapper`, () => {
       const wrapper = renderer(<Fixture />);
+      const firstUserWrapper =
+        renderer === shallow
+          ? wrapper.find('User').first().shallow()
+          : wrapper.find('User');
       const argsToTest = [
-        [wrapper, '.userOne', true],
-        [wrapper, 'User', false],
-        [wrapper, '[index=1]', true],
-        [wrapper, '[index]', false],
-        [wrapper.find('ul'), '[index]', false],
-        [wrapper.find('User'), '[index=1]', true],
-        [wrapper, '.userThree', false],
+        [wrapper, '.userOne', renderer === mount],
         [wrapper, '[data-index="value-1"]', renderer === mount],
+        [wrapper, '[data-index]', renderer === mount],
+        [firstUserWrapper, '[data-index="value-1"]', true],
+        [firstUserWrapper, '.userOne', true],
       ];
 
       argsToTest.forEach(([currentWrapper, selector, expectedResult]) => {
-        const result = toContainExactlyOneMatchingElement(
-          currentWrapper,
-          selector
-        );
+        const result = toContainMatchingNode(currentWrapper, selector);
         it(`returns ${expectedResult} for "${selector}" in <${getNodeName(
           currentWrapper
         )}>`, () => {

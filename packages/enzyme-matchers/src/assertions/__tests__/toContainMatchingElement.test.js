@@ -1,11 +1,12 @@
 const PropTypes = require('prop-types');
+const getNodeName = require('../../utils/name');
 
 const toContainMatchingElement = require('../toContainMatchingElement');
 
 function User(props) {
   return (
     <span className={props.className}>
-      User {props.index}
+      User <span data-index={`value-${props.index}`}>{props.index}</span>
     </span>
   );
 }
@@ -31,43 +32,41 @@ function Fixture() {
 }
 
 describe('toContainMatchingElement', () => {
-  const wrapper = shallow(<Fixture />);
-  const truthyResults = [
-    toContainMatchingElement(wrapper, 'User'),
-    toContainMatchingElement(wrapper, '[index=1]'),
-    toContainMatchingElement(wrapper, '[index]'),
-    toContainMatchingElement(wrapper.find('ul'), '[index]'),
-  ];
-  const falsyResults = [
-    toContainMatchingElement(wrapper, 'Foo'),
-    toContainMatchingElement(wrapper, '.userThree'),
-    toContainMatchingElement(wrapper.find('ul'), 'Bar'),
-  ];
+  [shallow, mount].forEach(renderer => {
+    describe(`with a ${renderer.name} wrapper`, () => {
+      const wrapper = renderer(<Fixture />);
+      const argsToTest = [
+        [wrapper, '.userOne', true],
+        [wrapper, 'User', true],
+        [wrapper, '[index=1]', true],
+        [wrapper, '[index]', true],
+        [wrapper.find('ul'), '[index]', true],
+        [wrapper.find('User'), '[index=1]', true],
+        [wrapper, '.userThree', false],
+        [wrapper, '[data-index]', renderer === mount],
+        [wrapper, '[data-index="value-1"]', renderer === mount],
+      ];
 
-  it('returns the pass flag properly', () => {
-    truthyResults.forEach(truthyResult => {
-      expect(truthyResult.pass).toBe(true);
-    });
-    falsyResults.forEach(falsyResult => {
-      expect(falsyResult.pass).toBe(false);
-    });
-  });
+      argsToTest.forEach(([currentWrapper, selector, expectedResult]) => {
+        const result = toContainMatchingElement(currentWrapper, selector);
+        it(`returns ${expectedResult} for "${selector}" in <${getNodeName(
+          currentWrapper
+        )}>`, () => {
+          expect(result.pass).toBe(expectedResult);
+        });
 
-  it('returns the message with the proper pass verbage', () => {
-    truthyResults.forEach(truthyResult => {
-      expect(truthyResult.message).toMatchSnapshot();
-    });
-  });
+        it(`returns the proper verbage for "${selector}"`, () => {
+          if (expectedResult) {
+            expect(result.message).toMatchSnapshot();
+          } else {
+            expect(result.negatedMessage).toMatchSnapshot();
+          }
+        });
 
-  it('returns the message with the proper fail verbage', () => {
-    falsyResults.forEach(falsyResult => {
-      expect(falsyResult.negatedMessage).toMatchSnapshot();
-    });
-  });
-
-  it('provides contextual information for the message', () => {
-    truthyResults.forEach(truthyResult => {
-      expect(truthyResult.contextualInformation).toMatchSnapshot();
+        it('provides contextual information for the message', () => {
+          expect(result.contextualInformation).toMatchSnapshot();
+        });
+      });
     });
   });
 });

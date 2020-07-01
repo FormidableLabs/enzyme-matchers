@@ -2,7 +2,7 @@
  * This source code is licensed under the MIT-style license found in the
  * LICENSE file in the root directory of this source tree. *
  *
- * @providesModule toContainMatchingElements
+ * @providesModule toContainMatchingNodes
  * @flow
  */
 
@@ -11,32 +11,32 @@ import html from '../utils/html';
 import getDisplayName from '../utils/displayName';
 import getNodeName from '../utils/name';
 
-function toContainMatchingElements(
+function toContainMatchingNodes(
   enzymeWrapper: EnzymeObject,
   n: number,
   selector: string
 ): Matcher {
-  const matches = enzymeWrapper.find(selector);
+  const matches = enzymeWrapper.find(selector).hostNodes();
   const pass = matches.length === n;
   const nodeName = getNodeName(enzymeWrapper);
 
   return {
     pass,
     message:
-      `Expected <${nodeName}> to contain ${n} element${n === 1
+      `Expected <${nodeName}> to contain ${n} node${n === 1
         ? ''
         : 's'} matching ` +
       `"${getDisplayName(selector)}" but ${matches.length} ${matches.length ===
       1
         ? 'was'
         : 'were'} found.`,
-    negatedMessage: `Expected <${nodeName}> to not contain ${n} element${n === 1
+    negatedMessage: `Expected <${nodeName}> to not contain ${n} node${n === 1
       ? ''
       : 's'} matching "${getDisplayName(selector)}" but it did.`,
     contextualInformation: {
-      actual: `Element tree for <${nodeName}>:\n ${html(enzymeWrapper)}`,
+      actual: `HTML Output of <${nodeName}>:\n ${html(enzymeWrapper, true)}`,
     },
   };
 }
 
-export default toContainMatchingElements;
+export default toContainMatchingNodes;

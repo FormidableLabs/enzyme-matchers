@@ -1,0 +1,324 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`toContainMatchingNodes provides contextual information for the message 1`] = `
+Object {
+  "actual": "HTML Output of <Fixture>:
+ <div><ul><li><span class=\\"userOne\\">User <span data-index=\\"value-1\\">1</span></span></li><li><span class=\\"userTwo\\">User <span data-index=\\"value-2\\">2</span></span></li></ul></div>",
+}
+`;
+
+exports[`toContainMatchingNodes provides contextual information for the message 2`] = `
+Object {
+  "actual": "HTML Output of <Fixture>:
+ <div><ul><li><span class=\\"userOne\\">User <span data-index=\\"value-1\\">1</span></span></li><li><span class=\\"userTwo\\">User <span data-index=\\"value-2\\">2</span></span></li></ul></div>",
+}
+`;
+
+exports[`toContainMatchingNodes provides contextual information for the message 3`] = `
+Object {
+  "actual": "HTML Output of <Fixture>:
+ <div><ul><li><span class=\\"userOne\\">User <span data-index=\\"value-1\\">1</span></span></li><li><span class=\\"userTwo\\">User <span data-index=\\"value-2\\">2</span></span></li></ul></div>",
+}
+`;
+
+exports[`toContainMatchingNodes provides contextual information for the message 4`] = `
+Object {
+  "actual": "HTML Output of <ul>:
+ <ul><li><span class=\\"userOne\\">User <span data-index=\\"value-1\\">1</span></span></li><li><span class=\\"userTwo\\">User <span data-index=\\"value-2\\">2</span></span></li></ul>",
+}
+`;
+
+exports[`toContainMatchingNodes provides contextual information for the message 5`] = `
+Object {
+  "actual": "HTML Output of <2 (anonymous) nodes found>:
+ Multiple nodes found:
+0: <function User(props) {
+  return React.createElement(\\"span\\", {
+    className: props.className
+  }, \\"User \\", React.createElement(\\"span\\", {
+    \\"data-index\\": \`value-\${props.index}\`
+  }, props.index));
+} index=\\"1\\" className=\\"userOne\\"/>
+1: <function User(props) {
+  return React.createElement(\\"span\\", {
+    className: props.className
+  }, \\"User \\", React.createElement(\\"span\\", {
+    \\"data-index\\": \`value-\${props.index}\`
+  }, props.index));
+} index=\\"2\\" className=\\"userTwo\\"/>
+",
+}
+`;
+
+exports[`toContainMatchingNodes provides contextual information for the message 6`] = `
+Object {
+  "actual": "HTML Output of <Fixture>:
+ <div><ul><li><span class=\\"userOne\\">User <span data-index=\\"value-1\\">1</span></span></li><li><span class=\\"userTwo\\">User <span data-index=\\"value-2\\">2</span></span></li></ul></div>",
+}
+`;
+
+exports[`toContainMatchingNodes provides contextual information for the message 7`] = `
+Object {
+  "actual": "HTML Output of <Fixture>:
+ <div><ul><li><span class=\\"userOne\\">User <span data-index=\\"value-1\\">1</span></span></li><li><span class=\\"userTwo\\">User <span data-index=\\"value-2\\">2</span></span></li></ul></div>",
+}
+`;
+
+exports[`toContainMatchingNodes provides contextual information for the message 8`] = `
+Object {
+  "actual": "HTML Output of <ul>:
+ <ul><li><span class=\\"userOne\\">User <span data-index=\\"value-1\\">1</span></span></li><li><span class=\\"userTwo\\">User <span data-index=\\"value-2\\">2</span></span></li></ul>",
+}
+`;
+
+exports[`toContainMatchingNodes returns the proper verbage for "1 .userOne" 1`] = `"Expected <Fixture> to contain 1 node matching \\".userOne\\" but 1 was found."`;
+
+exports[`toContainMatchingNodes returns the proper verbage for "1 .userThree" 1`] = `"Expected <Fixture> to not contain 1 node matching \\".userThree\\" but it did."`;
+
+exports[`toContainMatchingNodes returns the proper verbage for "1 [data-index="value-1"] in User" 1`] = `"Expected <2 (anonymous) nodes found> to contain 1 node matching \\"[data-index=\\"value-1\\"]\\" but 1 was found."`;
+
+exports[`toContainMatchingNodes returns the proper verbage for "1 [data-index="value-1"]" 1`] = `"Expected <Fixture> to contain 1 node matching \\"[data-index=\\"value-1\\"]\\" but 1 was found."`;
+
+exports[`toContainMatchingNodes returns the proper verbage for "1 [data-index]" 1`] = `"Expected <Fixture> to not contain 1 node matching \\"[data-index]\\" but it did."`;
+
+exports[`toContainMatchingNodes returns the proper verbage for "2 [data-index] in ul" 1`] = `"Expected <ul> to contain 2 nodes matching \\"[data-index]\\" but 2 were found."`;
+
+exports[`toContainMatchingNodes returns the proper verbage for "2 [data-index]" 1`] = `"Expected <Fixture> to contain 2 nodes matching \\"[data-index]\\" but 2 were found."`;
+
+exports[`toContainMatchingNodes returns the proper verbage for "3 [data-index] in ul" 1`] = `"Expected <ul> to not contain 3 nodes matching \\"[data-index]\\" but it did."`;
+
+exports[`toContainMatchingNodes with a mount wrapper provides contextual information for the message 1`] = `
+Object {
+  "actual": "HTML Output of <Fixture>:
+ <div><ul><li><span class=\\"userOne\\">User <span data-index=\\"value-1\\">1</span></span></li><li><span class=\\"userTwo\\">User <span data-index=\\"value-2\\">2</span></span></li></ul></div>",
+}
+`;
+
+exports[`toContainMatchingNodes with a mount wrapper provides contextual information for the message 2`] = `
+Object {
+  "actual": "HTML Output of <Fixture>:
+ <div><ul><li><span class=\\"userOne\\">User <span data-index=\\"value-1\\">1</span></span></li><li><span class=\\"userTwo\\">User <span data-index=\\"value-2\\">2</span></span></li></ul></div>",
+}
+`;
+
+exports[`toContainMatchingNodes with a mount wrapper provides contextual information for the message 3`] = `
+Object {
+  "actual": "HTML Output of <Fixture>:
+ <div><ul><li><span class=\\"userOne\\">User <span data-index=\\"value-1\\">1</span></span></li><li><span class=\\"userTwo\\">User <span data-index=\\"value-2\\">2</span></span></li></ul></div>",
+}
+`;
+
+exports[`toContainMatchingNodes with a mount wrapper provides contextual information for the message 4`] = `
+Object {
+  "actual": "HTML Output of <2 (anonymous) nodes found>:
+ Multiple nodes found:
+0: <function User(props) {
+  return React.createElement(\\"span\\", {
+    className: props.className
+  }, \\"User \\", React.createElement(\\"span\\", {
+    \\"data-index\\": \`value-\${props.index}\`
+  }, props.index));
+} index=\\"1\\" className=\\"userOne\\"/>
+1: <function User(props) {
+  return React.createElement(\\"span\\", {
+    className: props.className
+  }, \\"User \\", React.createElement(\\"span\\", {
+    \\"data-index\\": \`value-\${props.index}\`
+  }, props.index));
+} index=\\"2\\" className=\\"userTwo\\"/>
+",
+}
+`;
+
+exports[`toContainMatchingNodes with a mount wrapper provides contextual information for the message 5`] = `
+Object {
+  "actual": "HTML Output of <2 (anonymous) nodes found>:
+ Multiple nodes found:
+0: <function User(props) {
+  return React.createElement(\\"span\\", {
+    className: props.className
+  }, \\"User \\", React.createElement(\\"span\\", {
+    \\"data-index\\": \`value-\${props.index}\`
+  }, props.index));
+} index=\\"1\\" className=\\"userOne\\"/>
+1: <function User(props) {
+  return React.createElement(\\"span\\", {
+    className: props.className
+  }, \\"User \\", React.createElement(\\"span\\", {
+    \\"data-index\\": \`value-\${props.index}\`
+  }, props.index));
+} index=\\"2\\" className=\\"userTwo\\"/>
+",
+}
+`;
+
+exports[`toContainMatchingNodes with a mount wrapper provides contextual information for the message 6`] = `
+Object {
+  "actual": "HTML Output of <ul>:
+ <ul><li><span class=\\"userOne\\">User <span data-index=\\"value-1\\">1</span></span></li><li><span class=\\"userTwo\\">User <span data-index=\\"value-2\\">2</span></span></li></ul>",
+}
+`;
+
+exports[`toContainMatchingNodes with a mount wrapper provides contextual information for the message 7`] = `
+Object {
+  "actual": "HTML Output of <Fixture>:
+ <div><ul><li><span class=\\"userOne\\">User <span data-index=\\"value-1\\">1</span></span></li><li><span class=\\"userTwo\\">User <span data-index=\\"value-2\\">2</span></span></li></ul></div>",
+}
+`;
+
+exports[`toContainMatchingNodes with a mount wrapper provides contextual information for the message 8`] = `
+Object {
+  "actual": "HTML Output of <Fixture>:
+ <div><ul><li><span class=\\"userOne\\">User <span data-index=\\"value-1\\">1</span></span></li><li><span class=\\"userTwo\\">User <span data-index=\\"value-2\\">2</span></span></li></ul></div>",
+}
+`;
+
+exports[`toContainMatchingNodes with a mount wrapper returns the proper verbage for "1 .userOne in User" 1`] = `"Expected <2 (anonymous) nodes found> to contain 1 node matching \\".userOne\\" but 1 was found."`;
+
+exports[`toContainMatchingNodes with a mount wrapper returns the proper verbage for "1 .userOne" 1`] = `"Expected <Fixture> to contain 1 node matching \\".userOne\\" but 1 was found."`;
+
+exports[`toContainMatchingNodes with a mount wrapper returns the proper verbage for "1 .userThree" 1`] = `"Expected <Fixture> to not contain 1 node matching \\".userThree\\" but it did."`;
+
+exports[`toContainMatchingNodes with a mount wrapper returns the proper verbage for "1 [data-index="value-1"] in User" 1`] = `"Expected <2 (anonymous) nodes found> to contain 1 node matching \\"[data-index=\\"value-1\\"]\\" but 1 was found."`;
+
+exports[`toContainMatchingNodes with a mount wrapper returns the proper verbage for "1 [data-index="value-1"]" 1`] = `"Expected <Fixture> to contain 1 node matching \\"[data-index=\\"value-1\\"]\\" but 1 was found."`;
+
+exports[`toContainMatchingNodes with a mount wrapper returns the proper verbage for "1 [data-index]" 1`] = `"Expected <Fixture> to not contain 1 node matching \\"[data-index]\\" but it did."`;
+
+exports[`toContainMatchingNodes with a mount wrapper returns the proper verbage for "2 [data-index] in ul" 1`] = `"Expected <ul> to contain 2 nodes matching \\"[data-index]\\" but 2 were found."`;
+
+exports[`toContainMatchingNodes with a mount wrapper returns the proper verbage for "2 [data-index]" 1`] = `"Expected <Fixture> to contain 2 nodes matching \\"[data-index]\\" but 2 were found."`;
+
+exports[`toContainMatchingNodes with a shallow wrapper provides contextual information for the message 1`] = `
+Object {
+  "actual": "HTML Output of <div>:
+ <div>
+  <ul>
+    <li>
+      <User index={1} className=\\"userOne\\" />
+    </li>
+    <li>
+      <User index={2} className=\\"userTwo\\" />
+    </li>
+  </ul>
+</div>",
+}
+`;
+
+exports[`toContainMatchingNodes with a shallow wrapper provides contextual information for the message 2`] = `
+Object {
+  "actual": "HTML Output of <div>:
+ <div>
+  <ul>
+    <li>
+      <User index={1} className=\\"userOne\\" />
+    </li>
+    <li>
+      <User index={2} className=\\"userTwo\\" />
+    </li>
+  </ul>
+</div>",
+}
+`;
+
+exports[`toContainMatchingNodes with a shallow wrapper provides contextual information for the message 3`] = `
+Object {
+  "actual": "HTML Output of <div>:
+ <div>
+  <ul>
+    <li>
+      <User index={1} className=\\"userOne\\" />
+    </li>
+    <li>
+      <User index={2} className=\\"userTwo\\" />
+    </li>
+  </ul>
+</div>",
+}
+`;
+
+exports[`toContainMatchingNodes with a shallow wrapper provides contextual information for the message 4`] = `
+Object {
+  "actual": "HTML Output of <span>:
+ <span className=\\"userOne\\">
+  User 
+  <span data-index=\\"value-1\\">
+    1
+  </span>
+</span>",
+}
+`;
+
+exports[`toContainMatchingNodes with a shallow wrapper provides contextual information for the message 5`] = `
+Object {
+  "actual": "HTML Output of <span>:
+ <span className=\\"userOne\\">
+  User 
+  <span data-index=\\"value-1\\">
+    1
+  </span>
+</span>",
+}
+`;
+
+exports[`toContainMatchingNodes with a shallow wrapper provides contextual information for the message 6`] = `
+Object {
+  "actual": "HTML Output of <ul>:
+ <ul>
+  <li>
+    <User index={1} className=\\"userOne\\" />
+  </li>
+  <li>
+    <User index={2} className=\\"userTwo\\" />
+  </li>
+</ul>",
+}
+`;
+
+exports[`toContainMatchingNodes with a shallow wrapper provides contextual information for the message 7`] = `
+Object {
+  "actual": "HTML Output of <div>:
+ <div>
+  <ul>
+    <li>
+      <User index={1} className=\\"userOne\\" />
+    </li>
+    <li>
+      <User index={2} className=\\"userTwo\\" />
+    </li>
+  </ul>
+</div>",
+}
+`;
+
+exports[`toContainMatchingNodes with a shallow wrapper provides contextual information for the message 8`] = `
+Object {
+  "actual": "HTML Output of <div>:
+ <div>
+  <ul>
+    <li>
+      <User index={1} className=\\"userOne\\" />
+    </li>
+    <li>
+      <User index={2} className=\\"userTwo\\" />
+    </li>
+  </ul>
+</div>",
+}
+`;
+
+exports[`toContainMatchingNodes with a shallow wrapper returns the proper verbage for "1 .userOne in User" 1`] = `"Expected <span> to contain 1 node matching \\".userOne\\" but 1 was found."`;
+
+exports[`toContainMatchingNodes with a shallow wrapper returns the proper verbage for "1 .userOne" 1`] = `"Expected <div> to not contain 1 node matching \\".userOne\\" but it did."`;
+
+exports[`toContainMatchingNodes with a shallow wrapper returns the proper verbage for "1 .userThree" 1`] = `"Expected <div> to not contain 1 node matching \\".userThree\\" but it did."`;
+
+exports[`toContainMatchingNodes with a shallow wrapper returns the proper verbage for "1 [data-index="value-1"] in User" 1`] = `"Expected <span> to contain 1 node matching \\"[data-index=\\"value-1\\"]\\" but 1 was found."`;
+
+exports[`toContainMatchingNodes with a shallow wrapper returns the proper verbage for "1 [data-index="value-1"]" 1`] = `"Expected <div> to not contain 1 node matching \\"[data-index=\\"value-1\\"]\\" but it did."`;
+
+exports[`toContainMatchingNodes with a shallow wrapper returns the proper verbage for "1 [data-index]" 1`] = `"Expected <div> to not contain 1 node matching \\"[data-index]\\" but it did."`;
+
+exports[`toContainMatchingNodes with a shallow wrapper returns the proper verbage for "2 [data-index] in ul" 1`] = `"Expected <ul> to not contain 2 nodes matching \\"[data-index]\\" but it did."`;
+
+exports[`toContainMatchingNodes with a shallow wrapper returns the proper verbage for "2 [data-index]" 1`] = `"Expected <div> to not contain 2 nodes matching \\"[data-index]\\" but it did."`;

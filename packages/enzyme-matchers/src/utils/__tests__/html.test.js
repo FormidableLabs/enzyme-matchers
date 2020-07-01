@@ -3,7 +3,7 @@ const html = require('../html');
 describe('html', () => {
   const inputStrings = {
     shallow: '<input />',
-    mount: '<input>',
+    mount: '<input />',
   };
 
   [shallow, mount].forEach(builder => {
@@ -53,7 +53,7 @@ describe('html', () => {
       const wrapper = shallow(<Bar />);
       // simulate platforms where function.name is undefined
       wrapper.constructor = { toString: () => 'function ShallowWrapper() {}' };
-      expect(html(wrapper)).toBe('<div><Foo /></div>');
+      expect(html(wrapper)).toBe('<div>\n  <Foo />\n</div>');
     });
   });
 });

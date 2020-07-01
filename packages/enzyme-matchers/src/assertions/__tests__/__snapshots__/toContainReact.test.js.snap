@@ -3,10 +3,29 @@
 exports[`toContainReact provides contextual information for the message 1`] = `
 Object {
   "actual": "HTML Output of <div>:
- <div><ul><li><User index={1} /></li><li><User index={2} /></li></ul></div>",
+ <div>
+  <ul>
+    <li>
+      <User index={1} />
+    </li>
+    <li>
+      <User index={2} />
+    </li>
+  </ul>
+</div>",
 }
 `;
 
-exports[`toContainReact returns the message with the proper fail verbage 1`] = `"Expected <div> not to contain <span>User 1</span> but it does."`;
+exports[`toContainReact returns the message with the proper fail verbage 1`] = `
+"Expected <div> not to contain <span>
+  User 
+  1
+</span> but it does."
+`;
 
-exports[`toContainReact returns the message with the proper pass verbage 1`] = `"Expected <div> to contain <span>User 1</span> but it was not found."`;
+exports[`toContainReact returns the message with the proper pass verbage 1`] = `
+"Expected <div> to contain <span>
+  User 
+  1
+</span> but it was not found."
+`;

@@ -67,7 +67,7 @@ export default function getNameFromArbitraryWrapper(wrapper: Object): string {
 
       // determine if we have a mixed list of nodes or not
       wrapper.getElements().forEach(node => {
-        const name: string = getNameFromRoot(node);
+        const name = node ? getNameFromRoot(node) : `${node}`;
         nodeTypeMap[name] = (nodeTypeMap[name] || 0) + 1;
       });
 

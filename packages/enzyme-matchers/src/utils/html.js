@@ -39,19 +39,22 @@ function mapWrappersHTML(wrapper: EnzymeObject): Array<string> {
   });
 }
 
-export default function printHTMLForWrapper(wrapper: EnzymeObject): string {
+export default function printHTMLForWrapper(
+  wrapper: EnzymeObject,
+  hostNodesOnly?: boolean
+): string {
   switch (wrapper.getElements().length) {
     case 0: {
       return '[empty set]';
     }
     case 1: {
       if (isShallowWrapper(wrapper)) {
-        // This is used to clean up in any awkward spacing in the debug output.
-        // <div>  <Foo /></div> => <div><Foo /></div>
-        return wrapper.debug().replace(/\n(\s*)/g, '');
+        return wrapper.debug();
       }
-
-      return wrapper.html();
+      if (hostNodesOnly) {
+        return wrapper.html();
+      }
+      return wrapper.debug();
     }
     default: {
       const nodes = mapWrappersHTML(wrapper).reduce(

@@ -2,7 +2,7 @@
 
 exports[`toHaveDisplayName mount provides contextual information for the message (mount) 1`] = `
 Object {
-  "actual": "<a id=\\"a\\"></a>",
+  "actual": "<a id=\\"a\\" />",
 }
 `;
 
@@ -22,7 +22,13 @@ exports[`toHaveDisplayName mount returns the message with the proper pass verbag
 exports[`toHaveDisplayName mount works on composite functions 1`] = `
 Object {
   "contextualInformation": Object {
-    "actual": "<div><span id=\\"span\\"></span><span></span><a id=\\"a\\"></a></div>",
+    "actual": "<Fixture>
+  <div>
+    <span id=\\"span\\" />
+    <span />
+    <a id=\\"a\\" />
+  </div>
+</Fixture>",
   },
   "message": "Expected <Fixture> to have display name \\"Fixture\\" but it had display name \\"Fixture\\".",
   "negatedMessage": "Expected <Fixture> to not have display name \\"Fixture\\" but it did.",
@@ -33,7 +39,13 @@ Object {
 exports[`toHaveDisplayName mount works on composite functions 2`] = `
 Object {
   "contextualInformation": Object {
-    "actual": "<div><span id=\\"span\\"></span><span></span><a id=\\"a\\"></a></div>",
+    "actual": "<Fixture>
+  <div>
+    <span id=\\"span\\" />
+    <span />
+    <a id=\\"a\\" />
+  </div>
+</Fixture>",
   },
   "message": "Expected <Fixture> to have display name \\"a\\" but it had display name \\"Fixture\\".",
   "negatedMessage": "Expected <Fixture> to not have display name \\"a\\" but it did.",
@@ -63,7 +75,11 @@ exports[`toHaveDisplayName shallow returns the message with the proper pass verb
 exports[`toHaveDisplayName shallow works on composite functions 1`] = `
 Object {
   "contextualInformation": Object {
-    "actual": "<div><span id=\\"span\\" /><span /><a id=\\"a\\" /></div>",
+    "actual": "<div>
+  <span id=\\"span\\" />
+  <span />
+  <a id=\\"a\\" />
+</div>",
   },
   "message": "Expected <div> to have display name \\"Fixture\\" but it had display name \\"div\\".",
   "negatedMessage": "Expected <div> to not have display name \\"Fixture\\" but it did.",
@@ -74,7 +90,11 @@ Object {
 exports[`toHaveDisplayName shallow works on composite functions 2`] = `
 Object {
   "contextualInformation": Object {
-    "actual": "<div><span id=\\"span\\" /><span /><a id=\\"a\\" /></div>",
+    "actual": "<div>
+  <span id=\\"span\\" />
+  <span />
+  <a id=\\"a\\" />
+</div>",
   },
   "message": "Expected <div> to have display name \\"a\\" but it had display name \\"div\\".",
   "negatedMessage": "Expected <div> to not have display name \\"a\\" but it did.",

@@ -49,6 +49,9 @@ describe('test', () => {
 * [toBeDisabled()](#tobedisabled)
 * [toBeEmptyRender()](#tobeemptyrender)
 * [toExist()](#toexist)
+* [toContainMatchingNode()](#tocontainmatchingnode)
+* [toContainMatchingNodes()](#tocontainmatchingnodes)
+* [toContainExactlyOneMatchingNode()](#tocontainexactlyonematchingnode)
 * [toContainMatchingElement()](#tocontainmatchingelement)
 * [toContainMatchingElements()](#tocontainmatchingelements)
 * [toContainExactlyOneMatchingElement()](#tocontainexactlyonematchingelement)
@@ -79,7 +82,7 @@ Ways to use this API:
 expect().toBeChecked();
 ```
 
-Assert that the given wrapper is checked:
+Assert that the given wrapper is checked.
 
 ```js
 import React from 'react'
@@ -113,7 +116,7 @@ Ways to use this API:
 expect().toBeDisabled();
 ```
 
-Assert that the given wrapper is disabled:
+Assert that the given wrapper is disabled.
 
 ```js
 import React from 'react'
@@ -146,7 +149,7 @@ Ways to use this API:
 expect().toBeEmptyRender();
 ```
 
-Assert that the given wrapper has an empty render (`null` or `false`):
+Assert that the given wrapper has an empty render (`null` or `false`).
 
 ```js
 function EmptyRenderFixture() {
@@ -197,6 +200,153 @@ expect(wrapper.find('span')).toExist();
 expect(wrapper.find('ul')).not.toExist();
 ```
 
+#### `toContainMatchingNode()`
+
+| render | mount | shallow |
+| -------|-------|-------- |
+| no     | yes   | yes     |
+
+Ways to use this API:
+
+```js
+expect().toContainMatchingNode('.foo');
+```
+
+Assert that the given wrapper contains at least one matching host node for the given selector. Only matches against host nodes. When using react-dom, host nodes are HTML elements rather than custom React components, e.g. `<div>` versus `<MyComponent>`.
+
+```js
+function User(props) {
+  return (
+    <span className={props.className}>
+      User {props.index}
+    </span>
+  );
+}
+
+User.propTypes = {
+  index: PropTypes.number.isRequired,
+  className: PropTypes.string,
+};
+
+function Fixture() {
+  return (
+    <div>
+      <ul>
+        <li>
+          <User index={1} className="userOne" />
+        </li>
+        <li>
+          <User index={2} className="userTwo" />
+        </li>
+      </ul>
+    </div>
+  );
+}
+
+const wrapper = mount(<Fixture />); // mount/render/shallow when applicable
+
+expect(wrapper).toContainMatchingNode('.userOne');
+expect(wrapper).not.toContainMatchingNode('.userThree');
+```
+
+#### `toContainMatchingNodes()`
+
+| render | mount | shallow |
+| -------|-------|-------- |
+| no     | yes   | yes     |
+
+Ways to use this API:
+
+```js
+expect().toContainMatchingNodes(2, '.foo');
+```
+
+Assert that the given wrapper contains a given number of matching host nodes for the given selector. Only matches against host nodes. When using react-dom, host nodes are HTML elements rather than custom React components, e.g. `<div>` versus `<MyComponent>`.
+
+```js
+function User(props) {
+  return (
+    <span className={`user ${props.className}`}>
+      User {props.index}
+    </span>
+  );
+}
+
+User.propTypes = {
+  index: PropTypes.number.isRequired,
+  className: PropTypes.string,
+};
+
+function Fixture() {
+  return (
+    <div>
+      <ul>
+        <li>
+          <User index={1} className="userOne" />
+        </li>
+        <li>
+          <User index={2} className="userTwo" />
+        </li>
+      </ul>
+    </div>
+  );
+}
+
+const wrapper = mount(<Fixture />); // mount/render/shallow when applicable
+
+expect(wrapper).toContainMatchingNodes(2, '.user');
+expect(wrapper).not.toContainMatchingNodes(2, '.userTwo');
+```
+
+#### `toContainExactlyOneMatchingNode()`
+
+| render | mount | shallow |
+| -------|-------|-------- |
+| no     | yes   | yes     |
+
+Ways to use this API:
+
+```js
+expect().toContainExactlyOneMatchingNode('.foo');
+```
+
+Assert that the given wrapper contains exactly one matching node for the given selector. Only matches against host nodes. When using react-dom, host nodes are HTML elements rather than custom React components, e.g. `<div>` versus `<MyComponent>`.
+
+```js
+function User(props) {
+  return (
+    <span className={`user ${props.className}`}>
+      User {props.index}
+    </span>
+  );
+}
+
+User.propTypes = {
+  index: PropTypes.number.isRequired,
+  className: PropTypes.string,
+};
+
+function Fixture() {
+  return (
+    <div>
+      <ul>
+        <li>
+          <User index={1} className="userOne" />
+        </li>
+        <li>
+          <User index={2} className="userTwo" />
+        </li>
+      </ul>
+    </div>
+  );
+}
+
+const wrapper = mount(<Fixture />); // mount/render/shallow when applicable
+
+expect(wrapper).toContainExactlyOneMatchingNode('.userOne');
+expect(wrapper).not.toContainExactlyOneMatchingNode('.user');
+```
+
 #### `toContainMatchingElement()`
 
 | render | mount | shallow |
@@ -209,7 +359,7 @@ Ways to use this API:
 expect().toContainMatchingElement('.foo');
 ```
 
-Assert that the given wrapper contains at least one match for the given selector:
+Assert that the given wrapper contains at least one matching element for the given selector. Matches against both host nodes like `<div>` and custom React components like `<MyComponent>`.
 
 ```js
 function User(props) {
@@ -258,7 +408,7 @@ Ways to use this API:
 expect().toContainMatchingElements(2, '.foo');
 ```
 
-Assert that the given wrapper contains a given number of matches for the given selector:
+Assert that the given wrapper contains a given number of matches for the given selector. Matches against both host nodes like `<div>` and custom React components like `<MyComponent>`.
 
 ```js
 function User(props) {
@@ -292,8 +442,12 @@ function Fixture() {
 const wrapper = mount(<Fixture />); // mount/render/shallow when applicable
 
 expect(wrapper).toContainMatchingElements(2, 'User');
-expect(wrapper).not.toContainMatchingElements(2, '.userTwo');
+expect(wrapper).toContainMatchingElements(2, 'span.user');
+expect(wrapper).not.toContainMatchingElements(2, 'span.userTwo');
 ```
+
+**Note:** The selector in the first assertion above is qualified using the tag name `span`. If it was not, `toContainMatchingElements` would fail because `wrapper.find('.user')` matches twice for both `User.user` and `span.user`, for a total of 4 matches. To only match host (DOM) nodes, use [`.toContainMatchingNodes(2, '.user')`](#tocontainmatchingnodes).
+
 
 #### `toContainExactlyOneMatchingElement()`
 
@@ -307,7 +461,7 @@ Ways to use this API:
 expect().toContainExactlyOneMatchingElement('.foo');
 ```
 
-Assert that the given wrapper contains exactly one match for the given selector:
+Assert that the given wrapper contains exactly one match for the given selector. Matches against both host nodes like `<div>` and custom React components like `<MyComponent>`.
 
 ```js
 function User(props) {
@@ -340,9 +494,11 @@ function Fixture() {
 
 const wrapper = mount(<Fixture />); // mount/render/shallow when applicable
 
-expect(wrapper).toContainExactlyOneMatchingElement('.userOne');
+expect(wrapper).toContainExactlyOneMatchingElement('span.userOne');
 expect(wrapper).not.toContainExactlyOneMatchingElement('User');
 ```
+
+**Note:** The selector in the first assertion above is qualified using the tag name `span`. If it was not, `toContainExactlyOneMatchingElement` would fail because `wrapper.find('.userOne')` matches for both `User.userOne` and `span.userOne`. To only match host (DOM) nodes, use [`.toContainExactlyOneMatchingNode('.userOne')`](#tocontainexactlyonematchingnode).
 
 #### `toContainReact()`
 
@@ -356,7 +512,7 @@ Ways to use this API:
 expect().toContainReact(<div>foo</div>);
 ```
 
-Assert that the given wrapper contains the provided react instance:
+Assert that the given wrapper contains the provided react instance.
 
 ```js
 class User extends React.Component {
@@ -402,7 +558,7 @@ Ways to use this API:
 expect().toHaveClassName('foo');
 ```
 
-Assert that the given wrapper has the provided className:
+Assert that the given wrapper has the provided className.
 
 ```js
 function Fixture() {
@@ -435,7 +591,7 @@ Ways to use this API:
 expect().toHaveDisplayName('div');
 ```
 
-Assert that the wrapper is of a certain tag type:
+Assert that the wrapper is of a certain tag type.
 
 ```js
 function Fixture() {
@@ -465,7 +621,7 @@ expect().toHaveHTML('<div>html</div>');
 ```
 
 
-Assert that the given wrapper has the provided html:
+Assert that the given wrapper has the provided html.
 
 > **Note** Quotations are normalized.
 
@@ -499,7 +655,7 @@ expect().toHaveProp('foo');
 expect().toHaveProp({foo: 'value'});
 ```
 
-Assert that the given wrapper has the provided propKey and associated value if specified:
+Assert that the given wrapper has the provided propKey and associated value if specified.
 
 ```js
 function User() { ... }
@@ -542,7 +698,7 @@ Ways to use this API:
 expect().toHaveRef('foo');
 ```
 
-Assert that the mounted wrapper has the provided ref:
+Assert that the mounted wrapper has the provided ref.
 
 ```js
 class Fixture extends React.Component {
@@ -575,7 +731,7 @@ expect().toHaveState('foo', 'bar');
 expect().toHaveState({ foo: 'bar' });
 ```
 
-Assert that the component has the provided stateKey and optional value if specified:
+Assert that the component has the provided stateKey and optional value if specified.
 
 ```js
 class Fixture extends React.Component {
@@ -614,7 +770,7 @@ expect().toHaveStyle('height', '100%');
 expect().toHaveStyle({ height: '100%' });
 ```
 
-Assert that the component has style of the provided key and value:
+Assert that the component has style of the provided key and value.
 
 ```js
 function Fixture() {
@@ -686,7 +842,7 @@ Ways to use this API:
 expect().toIncludeText('bar');
 ```
 
-Assert that the wrapper includes the provided text:
+Assert that the wrapper includes the provided text.
 
 ```js
 function Fixture() {
@@ -715,7 +871,7 @@ Ways to use this API:
 expect().toHaveValue('bar');
 ```
 
-Assert that the given wrapper has the provided `value`:
+Assert that the given wrapper has the provided `value`.
 
 ```js
 function Fixture() {
@@ -783,7 +939,7 @@ Ways to use this API:
 expect().toMatchSelector('.foo');
 ```
 
-Assert that the wrapper matches the provided `selector`:
+Assert that the wrapper matches the provided `selector`.
 
 ```js
 function Fixture() {
