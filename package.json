@@ -45,12 +45,12 @@
     "@babel/preset-env": "^7.6.2",
     "@babel/preset-flow": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.6.1",
     "babel-eslint": "^10.0.3",
     "babel-jest": "^25.2.0",
     "babel-plugin-add-module-exports": "^1.0.2",
     "babel-preset-airbnb": "^4.1.0",
     "enzyme": "^3.4.0",
-    "enzyme-adapter-react-16": "^1.5.0",
     "eslint": "^4.9.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-prettier": "^2.9.0",
@@ -66,16 +66,16 @@
     "lint-staged": "^4.0.2",
     "prettier": "^1.5.3",
     "prop-types": "^15.6.0",
-    "react": "^16.5.1",
-    "react-dom": "^16.5.1",
-    "react-test-renderer": "^16.0.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-test-renderer": "^17.0.2",
     "readline-sync": "^1.4.1",
     "rimraf": "^2.5.0"
   },
   "jest": {
     "testEnvironment": "<rootDir>/packages/jest-environment-enzyme/lib/index.js",
     "testEnvironmentOptions": {
-      "enzymeAdapter": "react16"
+      "enzymeAdapter": "react17"
     },
     "setupFilesAfterEnv": [
       "<rootDir>/packages/jest-enzyme/src/index.js"

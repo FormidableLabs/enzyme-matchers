@@ -17,8 +17,11 @@ export const exposeGlobals = () => {
       dep = 'enzyme-adapter-react-15.4';
       break;
     case 'react16':
-    default:
       dep = 'enzyme-adapter-react-16';
+      break;
+    case 'react17':
+    default:
+      dep = '@wojtekmaj/enzyme-adapter-react-17';
   }
 
   let Adapter;
@@ -38,7 +41,8 @@ export const exposeGlobals = () => {
       or with npm
       
       > npm i --save-dev ${dep}
-      `, e,
+      `,
+      e
     );
     return;
   }

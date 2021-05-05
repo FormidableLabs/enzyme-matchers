@@ -50,7 +50,7 @@
     ],
     "testEnvironment": "../jest-environment-enzyme/lib/index.js",
     "testEnvironmentOptions": {
-      "adapter": "react16"
+      "adapter": "react17"
     },
     "verbose": true
   }

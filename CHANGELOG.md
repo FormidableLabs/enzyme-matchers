@@ -1,3 +1,8 @@
+8.0.0
+=====
+  * Added support for react 17. (@alandeivson, @iagocaldeira)
+
+
 7.1.2
 =====
   * Fix a typescript conflict with a recent Jest update. (@tobilen)
